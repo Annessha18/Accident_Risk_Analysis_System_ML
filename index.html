@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accident Risk Analysis System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="container">
+            <h1>Accident Risk Analysis System</h1>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#causes">Causes</a>
+                <a href="#data">Data</a>
+                <a href="#modelling">Data Modelling</a>
+                <a href="#prevention">Prevention</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Understanding Traffic Accidents to Save Lives</h2>
+        <p>Analyzing accident data to improve road safety and reduce fatalities.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About the Project</h2>
+        <p>
+            This project focuses on understanding the broader problem of traffic accidents
+            and road safety. It aims to raise awareness about accident causes, impacts,
+            and the importance of safer transportation systems for society.
+        </p>
+
+        <div class="button-group">
+            <button class="info-btn" onclick="toggleIntro()">Introduction</button>
+            <button class="info-btn" onclick="toggleResearchQuestions()">Research Questions</button>
+        </div>
+
+        <!-- Introduction content hidden by default -->
+        <div id="introduction" class="content-box">
+            <img src="image_car.jpeg" class="content-img" alt="Traffic accident scene">
+            <p>
+                Road traffic accidents are one of the most serious public safety challenges faced by societies across the world.
+                Roads are used daily by millions of people for commuting, education, healthcare, and leisure activities.
+                As cities grow and vehicle ownership increases, the likelihood of accidents also rises significantly.
+                Traffic accidents occur in various forms, including minor collisions, serious crashes, and fatal incidents.
+                These accidents can happen on highways, city roads, rural streets, and residential areas.
+                Many accidents occur suddenly, leaving little time for drivers or pedestrians to react.
+                The consequences of such incidents are often long-lasting and deeply impactful.
+                Families may lose loved ones, while survivors may face lifelong physical or emotional challenges.
+                Road accidents affect not only individuals but entire communities.
+                Understanding the broader issue of traffic accidents is essential for building safer roads.
+            </p>
+
+            <p>
+                Road safety is important because traffic accidents are largely preventable.
+                Unsafe driving behaviors such as speeding, distracted driving, and reckless maneuvers contribute to many crashes.
+                Environmental factors like rain, fog, and poor road lighting also increase accident risks.
+                When safety measures are ignored, the results can be devastating.
+                Traffic accidents can cause serious injuries that affect mobility and quality of life.
+                Victims may require long-term medical care and rehabilitation.
+                Families often experience emotional trauma and financial stress after accidents.
+                Communities with high accident rates may feel unsafe using roads.
+                Improving road safety helps protect lives and promotes responsible transportation.
+                This makes road safety a shared responsibility for everyone.
+            </p>
+
+            <p>
+                Traffic accidents affect a wide range of people beyond just drivers.
+                Pedestrians, cyclists, and passengers are equally vulnerable on the roads.
+                Children walking to school and elderly individuals crossing streets face higher risks.
+                Emergency responders are frequently exposed to traumatic accident scenes.
+                Hospitals and healthcare systems experience increased pressure due to accident-related injuries.
+                Employers may lose skilled workers because of accident-related disabilities.
+                Families may suffer emotional loss and economic hardship.
+                Communities may experience reduced mobility and public confidence.
+                Road accidents also place a financial burden on governments.
+                This highlights the widespread social impact of traffic accidents.
+            </p>
+
+            <p>
+                Governments and organizations have taken steps to improve road safety over time.
+                Traffic laws such as speed limits and seatbelt requirements have been enforced.
+                Roads have been improved with better signage and pedestrian crossings.
+                Public awareness campaigns encourage responsible driving behavior.
+                Vehicle safety features have been enhanced to protect occupants.
+                Schools educate children about safe road practices.
+                Law enforcement agencies monitor traffic to reduce violations.
+                Despite these efforts, accidents continue to occur.
+                This indicates that road safety is an ongoing challenge.
+                Continuous awareness and improvement are still needed.
+            </p>
+
+            <p>
+                There is still significant potential to improve road safety worldwide.
+                Rapid urbanization increases traffic congestion and accident risks.
+                Some areas lack proper infrastructure such as sidewalks and lighting.
+                Driver awareness and education vary across regions.
+                Emergency response times can be improved in many locations.
+                Community involvement can help promote safer road behavior.
+                Responsible driving culture plays a key role in reducing accidents.
+                Better planning can help prevent dangerous road conditions.
+                Ongoing attention to safety can save countless lives.
+                A safer road environment benefits everyone in society.
+            </p>
+        </div>
+
+        <!-- Research Questions content hidden by default -->
+        <div id="research-questions" class="content-box">
+            <ul>
+                <li>How does accident severity vary by road type?</li>
+                <li>Are there specific times of day or days of the week with more accidents?</li>
+                <li>How do weather conditions impact accident severity?</li>
+                <li>Are urban areas more prone to minor accidents while rural areas see more serious accidents?</li>
+                <li>Does lighting (daylight vs dark) affect the number and severity of accidents?</li>
+                <li>Is there a correlation between speed limits and accident severity?</li>
+                <li>What proportion of accidents involve multiple vehicles?</li>
+                <li>Which geographic areas have the highest accident density?</li>
+                <li>How do accidents vary by month or season?</li>
+                <li>Can clustering techniques identify high-risk accident patterns or “hotspots”?</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- Data Section -->
+    <section id="data" class="section">
+        <h2>Data & Analysis</h2>
+        <p>
+            Open government road safety datasets are used to study accident patterns,
+            severity levels, and environmental conditions affecting road safety.
+        </p>
+
+        <div class="button-group">
+            <button class="info-btn" onclick="toggleDataCollection()">Data Collection</button>
+            <button class="info-btn" onclick="toggleDataCleaning()">Data Cleaning</button>
+            <button class="info-btn" onclick="toggleDataVisualization()">Data Visualizations</button>
+        </div>
+
+        <!-- Data Collection content -->
+        <div id="data-collection" class="content-box">
+            <p>
+                For this project, traffic accident data was collected from publicly available government sources that track road safety and collision statistics. The main dataset comes from the UK Government Road Safety Data portal (data.gov.uk), which provides detailed information about road traffic collisions across the United Kingdom.
+            </p>
+            <p>
+                This dataset includes information such as the date and time of the accident, location coordinates (latitude and longitude), collision severity, number of vehicles involved, number of casualties, road type, speed limits, weather conditions, and lighting conditions. Using this data, we can analyze accident patterns in different areas, understand factors contributing to collisions, and identify high-risk zones.
+            </p>
+            <p>
+                In addition to downloading the dataset, data was also accessed through an API provided by the government portal, which allows real-time or periodic fetching of updated traffic accident records. This ensures that the project can work with the most recent data and demonstrates how automated data collection methods can be integrated into road safety analytics.
+            </p>
+            <p>
+                The dataset is updated regularly and maintained by the government to ensure accuracy and completeness. Using such open and verified sources ensures that the analysis is based on real-world events and provides meaningful insights for road safety.
+            </p>
+            <p>
+                By combining both static datasets and API-driven data, we can study patterns over time, compare accident severity across different regions, and provide recommendations to reduce road accidents and improve safety for drivers, pedestrians, and passengers.
+            </p>
+        </div>
+
+        <!-- Data Cleaning content -->
+        <div id="data-cleaning" class="content-box">
+            <p>
+                After collecting the traffic accident data, the next crucial step is cleaning it to make it usable for analysis. Real-world datasets often contain missing values, errors, inconsistencies, or irrelevant information that can affect the accuracy of insights. For example, some accident records might have missing coordinates, incorrect dates, or unrecorded severity information. Cleaning the data ensures that the analysis is reliable and meaningful.
+            </p>
+            <p>
+                During data cleaning, we first identified and removed any duplicate records to prevent double-counting of accidents. Then, we handled missing values by either filling them with appropriate placeholders or removing incomplete records where necessary. For instance, if the location of an accident was missing, that record might not be useful for mapping accident hotspots and could be excluded.
+            </p>
+            <p>
+                We also standardized the format of the data to maintain consistency. This included converting dates and times into a uniform format, standardizing names of road types and weather conditions, and ensuring that numeric fields like the number of casualties or vehicles involved were properly formatted as numbers.
+            </p>
+            <p>
+                Outliers and erroneous data were also addressed. For example, accidents recorded with an impossible number of vehicles or casualties were carefully inspected and corrected or removed. This helps in avoiding misleading trends in the analysis.
+            </p>
+            <p>
+                Finally, categorical variables such as accident severity, lighting conditions, and weather conditions were encoded consistently to make them easier to analyze. By doing this, we ensured that the dataset is clean, organized, and ready for meaningful visualizations and insights.
+            </p>
+            <p>
+                Proper data cleaning is essential because even small errors or inconsistencies in the dataset can lead to incorrect conclusions. By carefully cleaning and validating the data, we can provide more accurate and actionable recommendations for improving road safety.
+            </p>
+
+            <!-- Added Images -->
+            <img src="data_road.jpg" alt="Raw road accident data" class="content-img">
+            <img src="cleaned_data.jpg" alt="Cleaned accident data" class="content-img">
+        </div>
+
+        <!-- Data Visualization content -->
+        <div id="data-visualization" class="content-box">
+            <p>Below are visualizations of accident data showing patterns, severity, and trends.</p>
+            <img src="images/1.png" alt="Visualization 1">
+            <img src="images/2.png" alt="Visualization 2">
+            <img src="images/3.png" alt="Visualization 3">
+            <img src="images/4.png" alt="Visualization 4">
+            <img src="images/5.png" alt="Visualization 5">
+            <img src="images/6.png" alt="Visualization 6">
+            <img src="images/7.png" alt="Visualization 7">
+            <img src="images/8.png" alt="Visualization 8">
+            <img src="images/9.png" alt="Visualization 9">
+            <img src="images/10.png" alt="Visualization 10">
+        </div>
+    </section>
+
+    <!-- Data Modelling Section -->
+    <section id="modelling" class="section">
+        <h2>Data Modelling</h2>
+        <p>
+            This section focuses on the predictive modelling of traffic accidents. Here you can explore the models used, the code implementation, and the results obtained from the analysis.
+        </p>
+
+        <div class="button-group">
+            <button class="info-btn" onclick="toggleModel()">Model</button>
+            <button class="info-btn" onclick="toggleCode()">Code</button>
+            <button class="info-btn" onclick="toggleResults()">Results</button>
+        </div>
+
+        <!-- Model Content -->
+        <div id="model" class="content-box">
+            <p>
+                In this project, machine learning models such as Random Forest, XGBoost, and Logistic Regression are considered to predict accident severity based on road, weather, lighting, and temporal features.
+            </p>
+        </div>
+
+        <!-- Code Content -->
+        <div id="code" class="content-box">
+            <p>
+                The model implementation is done in Python using libraries like pandas, scikit-learn, and XGBoost. Data preprocessing, feature engineering, and model training are included in this section.
+            </p>
+        </div>
+
+        <!-- Results Content -->
+        <div id="results" class="content-box">
+            <p>
+                Model performance is evaluated using metrics such as accuracy, precision, recall, and F1-score. Confusion matrices and feature importance plots help visualize results and interpret which factors contribute most to accident severity.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Road Safety Analytics Project</p>
+    </footer>
+
+    <!-- JavaScript for all toggle buttons -->
+    <script>
+        function toggleIntro() {
+            const intro = document.getElementById('introduction');
+            intro.style.display = intro.style.display === 'block' ? 'none' : 'block';
+            if (intro.style.display === 'block') intro.scrollIntoView({behavior: 'smooth'});
+        }
+
+        function toggleResearchQuestions() {
+            const rq = document.getElementById('research-questions');
+            rq.style.display = rq.style.display === 'block' ? 'none' : 'block';
+            if (rq.style.display === 'block') rq.scrollIntoView({behavior: 'smooth'});
+        }
+
+        function toggleDataCollection() {
+            const dataCol = document.getElementById('data-collection');
+            dataCol.style.display = dataCol.style.display === 'block' ? 'none' : 'block';
+            if (dataCol.style.display === 'block') dataCol.scrollIntoView({behavior: 'smooth'});
+        }
+
+        function toggleDataCleaning() {
+            const dataClean = document.getElementById('data-cleaning');
+            dataClean.style.display = dataClean.style.display === 'block' ? 'none' : 'block';
+            if (dataClean.style.display === 'block') dataClean.scrollIntoView({behavior: 'smooth'});
+        }
+
+        function toggleDataVisualization() {
+            const dataVis = document.getElementById('data-visualization');
+            dataVis.style.display = dataVis.style.display === 'block' ? 'none' : 'block';
+            if (dataVis.style.display === 'block') dataVis.scrollIntoView({behavior: 'smooth'});
+        }
+
+        function toggleModel() {
+            const model = document.getElementById('model');
+            model.style.display = model.style.display === 'block' ? 'none' : 'block';
+            if (model.style.display === 'block') model.scrollIntoView({behavior: 'smooth'});
+        }
+
+        function toggleCode() {
+            const code = document.getElementById('code');
+            code.style.display = code.style.display === 'block' ? 'none' : 'block';
+            if (code.style.display === 'block') code.scrollIntoView({behavior: 'smooth'});
+        }
+
+        function toggleResults() {
+            const results = document.getElementById('results');
+            results.style.display = results.style.display === 'block' ? 'none' : 'block';
+            if (results.style.display === 'block') results.scrollIntoView({behavior: 'smooth'});
+        }
+    </script>
+
+</body>
+</html>
